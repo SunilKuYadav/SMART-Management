@@ -28,11 +28,37 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes clock-animate {
+  0% {
+    bottom: 50px;
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    bottom: 0px;
   }
+  75% {
+    top: 0px;
+  }
+  100% {
+    top: 50px;
+  }
+}
+@keyframes clock-animate-reverse {
+  0% {
+    bottom: 50px;
+  }
+  25% {
+    bottom: 0px;
+  }
+  75% {
+    top: 0px;
+  }
+  100% {
+    top: 50px;
+  }
+}
+.animate {
+  animation: clock-animate 1s ease-in-out;
+}
+.animate-reverse {
+  animation: clock-animate-reverse 1s ease-in-out;
 }
